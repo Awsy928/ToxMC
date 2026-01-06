@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToxMC | Network</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --main:#0a5cff;
+    --overlay:rgba(0,0,0,0.65);
+    --card:rgba(255,255,255,0.12);
+    --text:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:url("image-29.png") center/cover fixed no-repeat;
+    color:var(--text);
+}
+
+/* BLUR OVERLAY */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:var(--overlay);
+    backdrop-filter:blur(10px);
+    z-index:-1;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 6%;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:900;
+    color:var(--main);
+}
+
+.menu{
+    display:flex;
+    gap:22px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:90px 6% 40px;
+}
+
+.header h1{
+    background:var(--card);
+    backdrop-filter:blur(16px);
+    border-radius:22px;
+    padding:30px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:var(--main);
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.card p, .card li{
+    font-size:15px;
+    line-height:1.7;
+    opacity:.95;
+}
+
+.card ul{
+    font-size:46px;
+    font-weight:900;
+}
+
+.header span{
+    color:var(--main);
+}
+
+.header p{
+    margin-top:10px;
+    opacity:.9;
+}
+
+/* CONTENT */
+.section{
+    padding:60px 6%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+
+.copy-btn{
+    margin-top:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:var(--main);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.45);
+    opacity:.85;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    padding-right:18px;
+}
+
+/* INFO BOX */
+.info{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.info-box{
+    background:var(--card);
+    backdrop-filter:blur(16px);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+}
+
+.info-box h4{
+    font-size:18px;
+    margin-bottom:8px;
+    color:var(--main);
+}
+    font-size:46px;
+    font-weight:900;
+}
+
+.header span{
+    color:var(--main);
+}
+
+.header p{
+    margin-top:10px;
+    opacity:.9;
+}
+
+/* CONTENT */
+.section{
+    padding:60px 6%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    .header h1{
+        font-size:34px;
+    }
+}
+</style>
+
+<script>
+function copyIP(){
+    navigator.clipboard.writeText("toxmc.xyz");
+    alert("تم نسخ IP السيرفر!");
+}
+</script>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">ToxMC</div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="network.html">Network</a>
+        <a href="support.html">Support</a>
+    </div>
+</nav>
+<div class="header">
+    <h1><span>ToxMC</span> Network</h1>
+    <p>شبكة ماينكرافت عربية – قوة، متعة، واستقرار</p>
+</div>
+
+<section class="section">
+
+<div class="grid">
+
+<div class="card">
+<h3>🌍 من نحن</h3>
+<p>
+ToxMC Network هو سيرفر ماينكرافت عربي احترافي  
+نقدم تجربة لعب مستقرة، تحديثات مستمرة، وأنظمة حصرية.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 أنماط اللعب</h3>
+<ul>
+<li>Survival مطور</li>
+<li>Economy متوازن</li>
+<li>Events وفعاليات</li>
+<li>أنظمة رتب مميزة</li>
+</ul>
+</div>
+
+</div>
+
+<!-- SERVER INFO -->
+<div class="info">
+
+<div class="info-box">
+<h4>🧱 IP SERVER</h4>
+<p>toxmc.xyz</p>
+<button class="copy-btn" onclick="copyIP()">Copy IP</button>
+</div>
+
+<div class="info-box">
+<h4>💬 Discord</h4>
+<p>انضم لمجتمع ToxMC</p>
+<a class="copy-btn" href="https://discord.gg/CHTVBDWG42">Join Discord</a>
+</div>
+
+<div class="info-box">
+<h4>🌐 الحالة</h4>
+<p>🟢 Online</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 ToxMC Network — All Rights Reserved
+</footer>
+
+</body>
+</html>
